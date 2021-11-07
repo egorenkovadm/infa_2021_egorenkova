@@ -12,9 +12,9 @@ rect(screen, (152, 251, 152), (0, 300, 1000, 300),0)
 rect(screen, (176, 224, 230), (0, 0, 1000, 300),0)
 
 
-def men(x,y):
+def men(x,y,high):
     #man: body
-    ellipse(screen, (147, 112, 219), (x-10,y+40,100,200))
+    ellipse(screen, (147, 112, 219), (x-10,y+40,100,high))
     #man: head
     ellipse(screen, (255, 228, 196), (x,y,80,70))
     #man: arms
@@ -27,9 +27,9 @@ def men(x,y):
     line(screen, (0,0,0), (x+90,y+360),(x+125,y+360))
 
 
-def woman(x,y,f):
+def woman(x,y,f,high):
     #woman:body
-    polygon(screen, (255, 105, 180), [(x+40,y+30),(x-20,y+240),(x+100,y+240)])
+    polygon(screen, (255, 105, 180), [(x+40,y+30),(x-20,y+high),(x+100,y+high)])
     #woman:head
     ellipse(screen, (255, 228, 196), (x,y,80,70))
     #woman:arms
@@ -72,10 +72,10 @@ def icecream(x,y,s):
     
 
 
-men(210,160)
-men(720,160)
-woman(370,160,1)
-woman(550,160,0)
+men(210,160,200)
+men(720,160,150)
+woman(370,160,1,240)
+woman(550,160,0,240)
 heart(114,205,-2)
 icecream(820,345,1.5)
 icecream(540,140,-2.5)
